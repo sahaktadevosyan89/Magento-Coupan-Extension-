@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <myconf_vijaystore translate="label" module="birthdaycoupan">
+            <label>Birthday Coupan Setting</label>
+            <sort_order>100</sort_order>
+        </myconf_vijaystore>
+    </tabs>	
+	
+    <sections>
+        <birthdaycoupan_tab translate="label" module="birthdaycoupan">
+            <label>Birthday Coupan</label>
+            <tab>myconf_vijaystore</tab>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <birthdaycoupan_setting translate="label comment">
+                    <label>Birthday Coupan</label>
+                    <sort_order>503</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<birthdaycoupan_active translate="label comment">
+                            <label>Enable</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </birthdaycoupan_active>	
+						<birthdaycoupan_email_sender translate="label comment">
+							<frontend_type>select</frontend_type>
+							<label>Admin Email Notification</label>
+							<source_model>adminhtml/system_config_source_email_identity</source_model>
+							<validate>required-entry</validate>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</birthdaycoupan_email_sender> 						
+						<birthdaycoupan_sendemail_before_birthday translate="label comment">
+							<label>Send Email Before Birthday</label>
+							<frontend_type>text</frontend_type>
+							<validate>required-entry validate-number</validate>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</birthdaycoupan_sendemail_before_birthday>	
+						<birthdaycoupan_discount_type translate="label comment">
+							<frontend_type>select</frontend_type>
+							<label>Discount Type</label>
+							<source_model>birthdaycoupan/dropdown_discounttype</source_model>
+							<validate>required-entry</validate>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</birthdaycoupan_discount_type> 	
+						<birthdaycoupan_discount_amount translate="label comment">
+							<label>Discount Amount</label>
+							<frontend_type>text</frontend_type>
+							<validate>required-entry validate-number</validate>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</birthdaycoupan_discount_amount>
+						<birthdaycoupan_expires_in translate="label comment">
+							<label>Coupan Expires In</label>
+							<frontend_type>text</frontend_type>
+							<validate>required-entry validate-number</validate>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</birthdaycoupan_expires_in>
+						<birthdaycoupan_uses_per_customer translate="label comment">
+							<label>Uses per Customer</label>
+							<frontend_type>text</frontend_type>
+							<validate>required-entry validate-number</validate>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</birthdaycoupan_uses_per_customer>	
+						<birthdaycoupan_uses_per_coupan translate="label comment">
+							<label>Uses per Coupan</label>
+							<frontend_type>text</frontend_type>
+							<validate>required-entry validate-number</validate>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</birthdaycoupan_uses_per_coupan>	
+						<birthdaycoupan_customer_group translate="label comment">
+                            <label>Customer Group</label>
+							<frontend_type>multiselect</frontend_type>  
+							<source_model>birthdaycoupan/dropdown_customergroup</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </birthdaycoupan_customer_group>
+                     </fields>
+                </birthdaycoupan_setting>		
+            </groups>
+        </birthdaycoupan_tab>
+    </sections>
+</config>

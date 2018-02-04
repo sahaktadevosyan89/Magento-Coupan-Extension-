@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Learn_Birthdaycoupan>
+            <version>1.0.0</version>
+        </Learn_Birthdaycoupan>
+    </modules>
+
+<!-- 
+	<frontend>
+		<routers>
+			<birthdaycoupan>
+				<use>standard</use>
+				<args>
+					<module>Learn_Birthdaycoupan></module>
+					<frontName>birthdaycoupan</frontName>
+				</args>
+			</birthdaycoupan>
+		</routers>
+		<layout>
+			<updates>
+				<birthdaycoupan>
+					<file>learn/birthdaycoupan.xml</file>
+				</birthdaycoupan>
+			</updates>
+		</layout>
+	</frontend>
+	-->
+
+    <global>
+		<!-- Initialize the Block class -->		
+		<blocks>
+            <birthdaycoupan>
+                <class>Learn_Birthdaycoupan_Block</class>
+            </birthdaycoupan>
+        </blocks>
+		<!-- Initialize the Helper class -->
+		<helpers>
+			<birthdaycoupan>
+				<class>Learn_Birthdaycoupan_Helper</class>
+			</birthdaycoupan>
+		</helpers>
+		<!-- Initialize the Model class -->		
+		<models>
+			<birthdaycoupan>
+				<class>Learn_Birthdaycoupan_Model</class>
+			</birthdaycoupan>
+		</models>
+		<!-- Email Template -->
+		<template>
+			<email>
+				<birthdaycoupan_template translate="label" module="birthdaycoupan">
+					<label>Birthday Coupan Email Template</label>
+					<file>birthdaycoupan/birthdaycoupan.html</file>
+					<type>html</type>
+				</birthdaycoupan_template>
+			</email>
+		</template>
+    </global>
+	
+	<default>
+		<birthdaycoupan_tab>
+			<birthdaycoupan_setting>
+				<birthdaycoupan_active>1</birthdaycoupan_active>
+				<birthdaycoupan_email_sender>support</birthdaycoupan_email_sender>
+				<birthdaycoupan_sendemail_before_birthday>2</birthdaycoupan_sendemail_before_birthday>
+				<birthdaycoupan_discount_type>by_fixed</birthdaycoupan_discount_type>
+				<birthdaycoupan_discount_amount>100</birthdaycoupan_discount_amount>
+				<birthdaycoupan_expires_in>2</birthdaycoupan_expires_in>
+				<birthdaycoupan_uses_per_customer>1</birthdaycoupan_uses_per_customer>
+				<birthdaycoupan_uses_per_coupan>5</birthdaycoupan_uses_per_coupan>
+				<!-- <birthdaycoupan_customer_group></birthdaycoupan_customer_group> -->
+			</birthdaycoupan_setting>
+		</birthdaycoupan_tab>
+	</default>
+</config>
